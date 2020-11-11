@@ -11,7 +11,7 @@ var prezzoPerChilometro = 0.21;
 document.getElementById('basic-price-ticket').innerHTML = prezzoPerChilometro + "€";
 
 // calcolare il prezzo del biglietto
-var prezzoStandard = chilometri * prezzoPerChilometro;
+var prezzoStandard = Math.ceil(chilometri * prezzoPerChilometro);
 
 // applicare lo sconto del 20%
 var prezzoSconto20 = prezzoStandard * 20 / 100;
