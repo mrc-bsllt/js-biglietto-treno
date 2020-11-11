@@ -10,3 +10,11 @@ document.getElementById('basic-price-ticket').innerHTML = prezzoPerChilometro;
 
 // calcolare il prezzo del biglietto
 var prezzoStandard = chilometri * prezzoPerChilometro;
+
+// applicare lo sconto del 20%
+var prezzoSconto20 = prezzoStandard * 20 / 100;
+console.log(prezzoSconto20);
+
+// applicare lo sconto del 40%
+var prezzoSconto40 = prezzoStandard * 40 / 100;
+console.log(prezzoSconto40);
