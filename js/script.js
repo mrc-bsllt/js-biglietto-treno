@@ -19,16 +19,21 @@ var prezzoSconto20 = prezzoStandard * 20 / 100;
 // applicare lo sconto del 40%
 var prezzoSconto40 = prezzoStandard * 40 / 100;
 
-// prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
-if (anni >= 18 && anni <= 65) {
-  document.getElementById('final-price').innerHTML = prezzoStandard + "€";
-} else if (anni < 18) {
-  // prezzo biglietto per persone minorenni
-  document.getElementById('final-price').innerHTML = prezzoSconto20 + "€";
-  document.getElementById('banner').innerHTML = "!!!WOW che culo, sei minorenne e hai diritto ad uno sconto del 20%!!!";
-} else {
-  // prezzo biglietto per persone over 65
-  document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
-  document.getElementById('banner').innerHTML = "!!!WOW che culo (o forse no), hai più di 65 anni e ha diritto ad uno sconto del 40%!!!";
+if (!isNaN(chilometri) && !isNaN(anni)) {
 
+  // prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
+  if (anni >= 18 && anni <= 65) {
+    document.getElementById('final-price').innerHTML = prezzoStandard + "€";
+  } else if (anni < 18) {
+    // prezzo biglietto per persone minorenni
+    document.getElementById('final-price').innerHTML = prezzoSconto20 + "€";
+    document.getElementById('banner').innerHTML = "!!!WOW che culo, sei minorenne e hai diritto ad uno sconto del 20%!!!";
+  } else {
+    // prezzo biglietto per persone over 65
+    document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
+    document.getElementById('banner').innerHTML = "!!!WOW che culo (o forse no), hai più di 65 anni e ha diritto ad uno sconto del 40%!!!";
+  }
+
+} else {
+  alert("errore! i campi richiedono solo dei numeri compresi tra 1 e 1000");
 }
