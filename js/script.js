@@ -6,7 +6,7 @@ var anni = parseInt(prompt("Quanti anni hai?"));
 
 // prezzo biglieto base per chilometro
 var prezzoPerChilometro = 0.21;
-document.getElementById('basic-price-ticket').innerHTML = prezzoPerChilometro;
+document.getElementById('basic-price-ticket').innerHTML = prezzoPerChilometro + "€";
 
 // calcolare il prezzo del biglietto
 var prezzoStandard = chilometri * prezzoPerChilometro;
@@ -19,11 +19,11 @@ var prezzoSconto40 = prezzoStandard * 40 / 100;
 
 // prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
 if (anni >= 18 && anni <= 65) {
-  document.getElementById('final-price').innerHTML = prezzoStandard;
+  document.getElementById('final-price').innerHTML = prezzoStandard + "€";
 } else if (anni < 18) {
   // prezzo biglietto per persone minorenni
-  document.getElementById('final-price').innerHTML = prezzoSconto20;
+  document.getElementById('final-price').innerHTML = prezzoSconto20 + "€";
 } else {
   // prezzo biglietto per persone over 65
-  document.getElementById('final-price').innerHTML = prezzoSconto40;
+  document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
 }
