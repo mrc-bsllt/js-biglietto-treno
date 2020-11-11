@@ -19,7 +19,7 @@ var prezzoSconto20 = prezzoStandard * 20 / 100;
 // applicare lo sconto del 40%
 var prezzoSconto40 = prezzoStandard * 40 / 100;
 
-if (!isNaN(chilometri) && !isNaN(anni)) {
+if (!isNaN(chilometri) && !isNaN(anni) && anni <= 100 && chilometri <= 1000) {
 
   // prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
   if (anni >= 18 && anni <= 65) {
@@ -39,7 +39,7 @@ if (!isNaN(chilometri) && !isNaN(anni)) {
   }
 
 } else {
-  alert("errore! i campi richiedono solo dei numeri compresi tra 1 e 1000");
+  alert("errore! i campi richiedono solo dei numeri compresi tra 1 e 100 per gli anni, e tra 1 e 1000 per i km!");
 }
 
 if (chilometri < 0.5 && chilometri >= 0) {
