@@ -13,8 +13,17 @@ var prezzoStandard = chilometri * prezzoPerChilometro;
 
 // applicare lo sconto del 20%
 var prezzoSconto20 = prezzoStandard * 20 / 100;
-console.log(prezzoSconto20);
 
 // applicare lo sconto del 40%
 var prezzoSconto40 = prezzoStandard * 40 / 100;
-console.log(prezzoSconto40);
+
+// prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
+if (anni >= 18 && anni <= 65) {
+  document.getElementById('final-price').innerHTML = prezzoStandard;
+} else if (anni < 18) {
+  // prezzo biglietto per persone minorenni
+  document.getElementById('final-price').innerHTML = prezzoSconto20;
+} else {
+  // prezzo biglietto per persone over 65
+  document.getElementById('final-price').innerHTML = prezzoSconto40;
+}
