@@ -20,7 +20,9 @@ body {
   background-position: center;
   background-size: cover;
 }
+
 .block {
+  position: relative;
   width: 50%;
   height: 50%;
   padding: 30px;
@@ -32,4 +34,31 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-style: italic;
+}
+.block > p {
+  margin: 15px 0;
+}
+.box {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2px;
+  border-bottom: 2px solid #ffffff;
+}
+.block > p:last-child {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  margin-bottom: 0;
+  font-size: 35px;
+}
+#kilometres,
+#age,
+#final-price {
+  color: #9f620d;
+}
+#final-price {
+  text-decoration: underline;
 }

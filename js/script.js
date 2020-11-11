@@ -1,8 +1,10 @@
 // chiedere all'utente il numero di chilometri che vuole percorrere
 var chilometri = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
+document.getElementById('kilometres').innerHTML = chilometri + "km";
 
 // chiedi l'età del passeggero
 var anni = parseInt(prompt("Quanti anni hai?"));
+document.getElementById('age').innerHTML = anni + " anni";
 
 // prezzo biglieto base per chilometro
 var prezzoPerChilometro = 0.21;
