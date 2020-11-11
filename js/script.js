@@ -33,11 +33,17 @@ if (!isNaN(chilometri) && !isNaN(anni)) {
     document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
     document.getElementById('banner').innerHTML = "!!!WOW che culo (o forse no), hai più di 65 anni e ha diritto ad uno sconto del 40%!!!";
   } else if (anni < 8 && anni >= 1) {
-    alert("SEI TROPPO PICCOLO, RESTA A CASA!")
+    alert("SEI TROPPO PICCOLO, RESTA A CASA!");
   } else {
-    alert("MI STAI PRENDENDO PER IL CULO???!!!!")
+    alert("MI STAI PRENDENDO PER IL CULO???!!!!");
   }
 
 } else {
   alert("errore! i campi richiedono solo dei numeri compresi tra 1 e 1000");
+}
+
+if (chilometri < 0.5 && chilometri >= 0) {
+  alert("Stai a casa, non ne vale la pena");
+} else if (chilometri < 0) {
+  alert("MI STAI PRENDENDO PER IL CULO???!!!!");
 }
