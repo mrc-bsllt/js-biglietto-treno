@@ -25,9 +25,10 @@ if (anni >= 18 && anni <= 65) {
 } else if (anni < 18) {
   // prezzo biglietto per persone minorenni
   document.getElementById('final-price').innerHTML = prezzoSconto20 + "€";
-  alert ("WOW che culo, sei minorenne, ha diritto ad uno sconto del 20%")
+  document.getElementById('banner').innerHTML = "!!!WOW che culo, sei minorenne e hai diritto ad uno sconto del 20%!!!";
 } else {
   // prezzo biglietto per persone over 65
   document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
-  alert ("WOW che culo (o forse no), hai più di 65 anni, ha diritto ad uno sconto del 40%")
+  document.getElementById('banner').innerHTML = "!!!WOW che culo (o forse no), hai più di 65 anni e ha diritto ad uno sconto del 40%!!!";
+
 }

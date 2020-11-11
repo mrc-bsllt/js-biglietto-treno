@@ -24,7 +24,7 @@ body {
 .block {
   position: relative;
   width: 50%;
-  height: 50%;
+  /* height: 50%; */
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
@@ -50,14 +50,22 @@ h1 {
 .block > p:last-child {
   position: absolute;
   left: 30px;
-  bottom: 30px;
+  bottom: 0;
+  padding-bottom: 30px;
   margin-bottom: 0;
   font-size: 35px;
 }
 #kilometres,
 #age,
+#banner,
 #final-price {
   color: #9f620d;
+}
+#banner {
+  font-size: 20px;
+  padding: 100px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 #final-price {
   text-decoration: underline;
