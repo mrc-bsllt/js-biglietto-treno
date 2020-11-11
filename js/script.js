@@ -24,14 +24,18 @@ if (!isNaN(chilometri) && !isNaN(anni)) {
   // prezzo biglietto per persone maggiorenni ma che non superano i 65 anni
   if (anni >= 18 && anni <= 65) {
     document.getElementById('final-price').innerHTML = prezzoStandard + "€";
-  } else if (anni < 18) {
+  } else if (anni < 18 && anni >= 8) {
     // prezzo biglietto per persone minorenni
     document.getElementById('final-price').innerHTML = prezzoSconto20 + "€";
     document.getElementById('banner').innerHTML = "!!!WOW che culo, sei minorenne e hai diritto ad uno sconto del 20%!!!";
-  } else {
+  } else if (anni > 65) {
     // prezzo biglietto per persone over 65
     document.getElementById('final-price').innerHTML = prezzoSconto40 + "€";
     document.getElementById('banner').innerHTML = "!!!WOW che culo (o forse no), hai più di 65 anni e ha diritto ad uno sconto del 40%!!!";
+  } else if (anni < 8 && anni >= 1) {
+    alert("SEI TROPPO PICCOLO, RESTA A CASA!")
+  } else {
+    alert("MI STAI PRENDENDO PER IL CULO???!!!!")
   }
 
 } else {
