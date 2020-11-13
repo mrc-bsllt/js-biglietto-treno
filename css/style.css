@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+#calc-ticket,
+#ticket {
+  padding: 50px;
+  margin-bottom: 80px;
+}
