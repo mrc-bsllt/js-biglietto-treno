@@ -3,8 +3,70 @@
   padding: 0;
   box-sizing: border-box;
 }
-#calc-ticket,
-#ticket {
-  padding: 50px;
-  margin-bottom: 80px;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/landscape.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.block {
+  position: relative;
+  width: 50%;
+  /* height: 50%; */
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+}
+.block > p {
+  margin: 15px 0;
+}
+.box {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2px;
+  border-bottom: 2px solid #ffffff;
+}
+.block > p:last-child {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  font-size: 35px;
+}
+#kilometres,
+#age,
+#banner,
+#final-price {
+  color: #9f620d;
+}
+#banner {
+  font-size: 20px;
+  padding: 100px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#final-price {
+  text-decoration: underline;
 }
